@@ -1,0 +1,17 @@
+<div class="container mt-5 mb-5">
+    <app-products [child_title_from_parent]="parent_title"
+        (child_new_product_Event)="addProductParent($event)"></app-products>
+
+    <div class="mb-5">
+        <h2>New product list</h2>
+        <div>
+            {{product}}
+        </div>
+    </div>
+</div>
+
+<span>{{isLoggedIn}}</span>
+
+
+
+<app-learn-form></app-learn-form>

@@ -1,10 +1,26 @@
-
 <div class="card" style="background-color:lightblue; border-color:darkblue;">
   <div class="card-body">
     <h4 class="card-title">Product Lists</h4>
     <div>{{rNum}}</div>
 
-    <div>{{p_title}}</div>
-    
+    <div>{{child_title_from_parent}}</div>
+
   </div>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="form-control">
+      <label class="form-label">Products</label>
+      <input class="form-input" type="text" #newProduct>
+    </div>
+    <button class="btn btn-primary" (click)="addProductChild(newProduct.value)">Add Product</button>
+  </div>
+</div>
+
+<!-- <div *ngFor="let todo of todos">
+  <li> UserID: {{todo.userId}}</li>
+  <li> Title: {{todo.title}}</li>
+
+</div> -->

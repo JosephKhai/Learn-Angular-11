@@ -1,0 +1,33 @@
+<div class="container mt-5">
+
+    <!--template form-->
+    <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" class="row g-3">
+
+        <div class="mb-3 row">
+            <label class="form-label">Name: </label>
+            <input class="form-control" type="text" [(ngModel)]="customerName" name="customerName" />
+
+        </div>
+
+        <div class="mb-3 row">
+            <label class="form-label">Email: </label>
+            <input class="form-control" type="text" [(ngModel)]="email" name="email" />
+
+        </div>
+
+        <div class="mb-3 row">
+            <label class="form-label">Password: </label>
+            <input class="form-control" type="text" [(ngModel)]="password" name="password" />
+
+        </div>
+
+        <div class="mb-3 row">
+            <button class="btn btn-primary" type="submit" [disabled]="!customerForm.form.valid">Register</button>
+        </div>
+        <div class="mb-3 row">
+            <button class="btn btn-danger" type="submit" (click)="onDelete()">Delete</button>
+        </div>
+
+
+    </form>
+</div>
